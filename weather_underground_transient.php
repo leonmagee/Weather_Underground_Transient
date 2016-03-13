@@ -18,7 +18,7 @@ class weather_underground_transient {
 		$this->state_abr  = $state_abr;
 		$this->city_title = $city_title;
 		$this->city_und   = str_replace( ' ', '_', $this->city_title );
-		$this->wu_key     = '60342d66c45e7af0';
+		$this->wu_key     = 'your-api-key';
 		$this->wu_url     = 'http://api.wunderground.com/api/' . $this->wu_key . '/conditions/q/' . $this->state_abr . '/' . $this->city_und . '.json';
 		$this->trans_key  = 'city_temp_' . $this->city_und . '_' . $this->state_abr;
 		$this->trans_time = 300; // 5 minutes
