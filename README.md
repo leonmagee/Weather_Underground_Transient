@@ -12,5 +12,5 @@ Requires an API key from Weather Underground.
 
 	$temp_object = new weather_underground_transient( 'CA', 'San Diego' );
 
-	$current_temp_trans = $temp_object->get_current_temp();
+	$current_temperature = $temp_object->get_current_temp();
 ```
