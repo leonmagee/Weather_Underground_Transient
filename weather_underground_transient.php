@@ -5,23 +5,23 @@
  */
 class weather_underground_transient {
 
-	public $slug;
 	public $state_abr;
 	public $city_title;
+	public $city_und;
 	public $wu_key;
 	public $wu_url;
 	public $trans_key;
 	public $trans_time;
 
-	public function __construct( $slug, $state_abr, $city_title ) {
+	public function __construct( $state_abr, $city_title ) {
 
-		$this->slug       = $slug;
 		$this->state_abr  = $state_abr;
 		$this->city_title = $city_title;
-		$this->wu_key     = 'your-api-key';
-		$this->wu_url     = 'http://api.wunderground.com/api/' . $this->wu_key . '/conditions/q/' . $this->state_abr . '/' . $this->slug . '.json';
-		$this->trans_key  = 'city_temp_' . $this->slug . '_' . $this->state_abr;
-		$this->trans_time = 600; // 10 minutes
+		$this->city_und   = str_replace( ' ', '_', $this->city_title );
+		$this->wu_key     = '60342d66c45e7af0';
+		$this->wu_url     = 'http://api.wunderground.com/api/' . $this->wu_key . '/conditions/q/' . $this->state_abr . '/' . $this->city_und . '.json';
+		$this->trans_key  = 'city_temp_' . $this->city_und . '_' . $this->state_abr;
+		$this->trans_time = 300; // 5 minutes
 	}
 
 	public function get_current_temp() {
