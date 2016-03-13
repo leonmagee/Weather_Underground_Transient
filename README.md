@@ -3,6 +3,8 @@
 Grab weather data for a city name with the Weatehr Underground service, then store that
 value in a transient (prevents excessive use of their API).
 
+Requires an API key from Weather Underground.
+
 ### Usage
 
 ```php
