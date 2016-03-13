@@ -8,7 +8,9 @@ Requires an API key from Weather Underground.
 ### Usage
 
 ```php
-	$temp_object = new weather_underground_transient( $state_abr, get_the_title() );
+	$temp_object = new weather_underground_transient( 'State Abbreviation', 'City Name' );
+
+	$temp_object = new weather_underground_transient( 'CA', 'San Diego' );
 
 	$current_temp_trans = $temp_object->get_current_temp();
 ```
